@@ -2,6 +2,43 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.5.6] - 15.11.2020
+
+### Changed
+
+    - Updated to Go 1.15.5 (security fixes)
+
+### Fixed
+
+    - Store milestone after it was found in serachMissingMilestone
+
+## [0.5.5] - 13.11.2020
+
+### Changed
+
+    - traverse the cone of a solid milestone to reapply former milestones if they were missing in the database
+
+### Fixed
+
+    - update iota.go to fix finalizing of bundles
+
+## [0.5.4] - 13.11.2020
+
+### Changed
+
+    - use iota.go/curl and iota.go/curl/bct instead of the much less performant hive.go versions
+    - migrate batchhasher from hive.go into hornet
+    - optimize batchhasher and add testcases
+    - iota.go now ignores 243rd trit in signature fragments
+
+### Fixed
+
+    - coordinator startup race condition
+    - improve tryte distribution of tools/rand-seed
+    - do not change default GOMAXPROCS value
+    - several CLI flag problems
+    - delete invalid milestones (2272660, 2272661) that could not be solidified after COO crashed
+
 ## [0.5.3] - 14.09.2020
 
 ### Added
